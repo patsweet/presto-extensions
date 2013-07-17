@@ -7,6 +7,20 @@ The [only current script](presto-extensions/presto-extensions/clearfront.js) add
 
 I would hope that anyone working with presto would find these helpful. If you have a script you already use and find helpful, please submit a pull request to share it with others.
 
+So far, these have only been tested on the training site. To use in your newsroom, you'll have to edit the [manifest.json](presto-extensions/presto-extensions/manifest.json) file to look like so:
+
+```
+...
+"content_scripts": [
+    {
+        // For clearfronts.js
+        "matches": ["https://<your presto url>/Manage/ManageFronts.aspx"],
+        "js": ["jquery.js", "clearfront.js"]
+    }
+]
+...
+```
+
 ---
 ### Current Scripts
 * [clearfront.js](presto-extensions/presto-extensions/clearfront.js)
