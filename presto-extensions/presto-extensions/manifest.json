@@ -1,14 +1,12 @@
 {
-    // Required
     "name": "Presto extensions",
     "version": "0.1",
     "manifest_version": 2,
-
-    // Recommended
     "description": "Adds concenience functions to Presto",
-
     "content_scripts": [
         {
+	    // Adds a button to clear all content from the current front.
+	    // Nothing is permanent until you hit publish, though.
             "matches": ["https://presto-rochester-train.gannettdigital.com/Manage/ManageFronts.aspx"],
             "js": ["jquery.js", "clearfront.js"]
         }
