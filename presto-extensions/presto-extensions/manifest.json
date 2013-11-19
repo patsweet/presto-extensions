@@ -7,7 +7,7 @@
         {
 	    // Adds a button to clear all content from the current front.
 	    // Nothing is permanent until you hit publish, though.
-            "matches": ["https://presto-*.gannettdigital.com/Manage/ManageFronts.aspx"],
+            "matches": ["https://*.gannettdigital.com/Manage/ManageFronts.aspx"],
             "js": ["jquery.js", "clearfront.js"]
         }
       // , {
