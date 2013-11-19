@@ -2,13 +2,17 @@
     "name": "Presto extensions",
     "version": "0.1",
     "manifest_version": 2,
-    "description": "Adds concenience functions to Presto",
+    "description": "Adds functions to Presto for a little added convenience.",
     "content_scripts": [
         {
 	    // Adds a button to clear all content from the current front.
 	    // Nothing is permanent until you hit publish, though.
-            "matches": ["https://presto-rochester-train.gannettdigital.com/Manage/ManageFronts.aspx"],
+            "matches": ["https://presto-*.gannettdigital.com/Manage/ManageFronts.aspx"],
             "js": ["jquery.js", "clearfront.js"]
         }
+      // , {
+      //       "matches": ["https://presto-rochester-train.gannettdigital.com/View/Content*Edit/Default.aspx"],
+      //       "js": ["jquery.js", "saveShortcut.js"]
+      //   }
     ]
 }
