@@ -13,8 +13,8 @@ So far, these have only been tested on the training site. To use in your newsroo
 ...
 "content_scripts": [
     {
-        // For clearfronts.js
-        "matches": ["https://<your presto url>/Manage/ManageFronts.aspx"],
+        // For clearfront.js
+        "matches": ["https://<YOUR PRESTO URL>/Manage/ManageFronts.aspx"],
         "js": ["jquery.js", "clearfront.js"]
     }
 ]
