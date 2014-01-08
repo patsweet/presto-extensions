@@ -1,14 +1,25 @@
 {
     "name": "Presto extensions",
-    "version": "0.1",
+    "version": "0.2",
     "manifest_version": 2,
-    "description": "Adds functions to Presto for a little added convenience.",
+    "description": "Adds functions to Presto for a little added convenience. Last updated 1/8/2014.",
+    "web_accessible_resources": ["jquery-1.10.2.min.map"],
     "content_scripts": [
         {
 	    // Adds a button to clear all content from the current front.
 	    // Nothing is permanent until you hit publish, though.
-            "matches": ["https://*.gannettdigital.com/Manage/ManageFronts.aspx"],
+            "matches": [
+                "https://*.gannettdigital.com/Manage/ManageFronts.aspx"
+            ],
             "js": ["jquery.js", "clearfront.js"]
+        },
+        {
+            "matches": [
+                "https://*.gannettdigital.com/Create/Story*",
+                "https://*.gannettdigital.com/Create/BlogPost*",
+                "https://*.gannettdigital.com/View/Content/*/Edit*"
+            ],
+            "js": ["jquery.js", "downloadPhotoAsset.js"]
         }
       // , {
       //       "matches": ["https://presto-rochester-train.gannettdigital.com/View/Content*Edit/Default.aspx"],
